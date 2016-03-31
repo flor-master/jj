@@ -1,0 +1,66 @@
+$menu-height: 70px;
+body{
+  margin: 0;
+  padding: $menu-height 0 0 0;
+  font-family: "Arial", sans-serif;
+}
+a{
+  color: #000;
+}
+
+
+.top-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(#cccccc, .6);
+  text-align: center;
+  height: $menu-height;
+
+  &__item{
+    display: inline-block;
+    position: relative;
+    padding:0 7px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 65px;
+    height: 70px;
+    text-align: center;
+    &.-active{
+      &:before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: #000;
+      }
+    }
+  }
+}
+
+.section_base{
+  height: 700px;
+}
+#section1{
+  @extend .section_base;
+  background: rgba(#000, .6);
+}
+#section2{
+  @extend .section_base;
+  background: rgba(#000, .5);
+}
+#section3{
+  @extend .section_base;
+  background: rgba(#000, .4);
+}
+#section4{
+  @extend .section_base;
+  background: rgba(#000, .3);
+}
+#section5{
+  @extend .section_base;
+  background: rgba(#000, .1);
+}
